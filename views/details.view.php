@@ -38,7 +38,7 @@
                 <li class="breadcrumb-item"><a href="<?php echo url_for('/index.php'); ?>">Home</a></li>
                 <?php if(isset($breadcrumb)) { ?>
                 <?php foreach ($breadcrumb as $crumb) { ?>
-                    <li class="breadcrumb-item"><a href="catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a></li>
+                    <li class="breadcrumb-item"><a href="/pages/catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a></li>
                     <li class="breadcrumb-item active"><?php echo $crumb['code']; ?></li>
                 <?php } ?>
                 <?php } /* isset for breadcrumb*/?>
@@ -73,15 +73,15 @@
                 <?php } ?>
             <?php } /* isset for $items */?>
                 <?php if(isset($images)) { ?>
-                <?php  foreach ($images as $image) { ?>
+                <?php  foreach ($images as $image) : ?>
                     <div class="col-12 col-sm-6">
-                        <img class='card' src='<?php echo IMAGES . $image['image']; ?>' alt='<?php echo $image['description']; ?>'>
+                        <img class="card" src="<?php echo IMAGES . $image['image']; ?>" alt="<?php echo $image['description']; ?>">
                     </div>
-                <?php  } ?>
+                <?php  endforeach; ?>
             <?php } /* images isset */?>
 
     </div>
-<section/>
+</section>
 
 
         <?php include(SHARED_PATH . '/footer.php'); ?>
