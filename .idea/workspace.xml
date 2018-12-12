@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="51a53c87-7d8a-437f-a4f3-b066b0a7e262" name="Default" comment="cleaned up files.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="51a53c87-7d8a-437f-a4f3-b066b0a7e262" name="Default" comment="cleaned up files." />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +224,7 @@
       <workItem from="1542821858601" duration="2162000" />
       <workItem from="1543202258535" duration="27000" />
       <workItem from="1544634086812" duration="805000" />
-      <workItem from="1544642926501" duration="67000" />
+      <workItem from="1544642926501" duration="321000" />
     </task>
     <task id="LOCAL-00031" summary="changed the margin size now need to change it to effect the card size.">
       <created>1514593218790</created>
@@ -576,17 +573,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116207000" />
+    <option name="totallyTimeSpent" value="116461000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2207" y="41" width="1400" height="1000" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26440176" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Gulp" order="2" side_tool="true" />
-      <window_info id="npm" order="3" side_tool="true" />
-      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26440176" />
+      <window_info id="Gulp" order="1" side_tool="true" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info active="true" id="Structure" order="4" visible="true" weight="0.24963072" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32998884" />
