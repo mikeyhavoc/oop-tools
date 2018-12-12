@@ -1,3 +1,4 @@
+
 CREATE TABLE Brands (
   b_id int NOT NULL AUTO_INCREMENT,
   brand VARCHAR(35) UNIQUE NOT NULL,
@@ -38,7 +39,7 @@ CREATE TABLE Images (
   i_id int NOT NULL AUTO_INCREMENT,
   image VARCHAR(255) UNIQUE NOT NULL ,
   t_id int NOT NULL ,
-  image_num TINYINT not null, 
+  image_num TINYINT not null,
   PRIMARY KEY ( i_id ),
   FOREIGN KEY (t_id) REFERENCES Tools(t_id)
 );
@@ -1078,16 +1079,3 @@ INSERT INTO Images (t_id, image, image_num)
       (27, 'img/wrench/v28-wrench.jpg',1),
       (42, 'img/wrench/w42-wrench.jpg',1),
       (18, 'img/wrench/x18-wrench.jpg',1);
-
-
-
-
-
-
-
-
-
-
-
-
-
