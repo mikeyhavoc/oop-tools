@@ -5,7 +5,7 @@
  * Date: 12/21/17
  * Time: 11:02 AM
  */
- require_once('bootstrap.php');
+ require_once('../bootstrap.php');
 
 $id_num = $_GET['id']; // grabbing Global Variable GET id
 $id = filter_var($id_num, FILTER_SANITIZE_NUMBER_INT); // filtering and sanitizing number going into array for value.
@@ -58,4 +58,4 @@ try {
 }
 $pageTitle = 'Details';
 
-require_once('views/details.view.php');
+require_once('../views/details.view.php');
