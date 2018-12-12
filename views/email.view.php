@@ -36,6 +36,8 @@
     </section>
 </header>
 
+<?php include(SHARED_PATH . '/nav.php'); ?>
+
 <?php if (isset($_GET['status']) && ($_GET['status'] == 'thanks')) { ?>
     <div class="container text-center">
         <div class="row">
