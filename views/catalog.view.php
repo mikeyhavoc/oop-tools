@@ -19,7 +19,7 @@
 <header role="banner" class='container-fluid'>
     <section class='row'>
         <h1 class="col-12 col-md-4 tools logo__section logo">
-            <a class="logo__title logo" href="<?php echo url_for( 'index.php'); ?>">Garys Tools</a>
+            <a class="logo__title logo" href="<?php echo url_for( 'index.php'); ?>">Gary's Tools</a>
         </h1>
     </section>
 </header>
@@ -40,7 +40,7 @@
                 <?php if(isset($breadcrumb)) { ?>
                     <?php foreach ($breadcrumb as $crumb) { ?>
                         <li class="breadcrumb-item">
-                            <a class="disabled text-muted" href="catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a>
+                            <a class="disabled text-muted" href="/pages/catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a>
                         </li>
                     <?php } //end foreach?>
                 <?php } ?>
