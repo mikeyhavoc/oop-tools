@@ -70,7 +70,7 @@
                                 <p class="text-center">
                                     Tool Type: Sockets.<br>
                                 </p>
-                                <a href="<?php echo url_for( 'catalog.view.php?cat=sockets'); ?>">
+                                <a href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>">
                                     <img class="catalog-images center-block img-responsive img-rounded" src="<?php echo  IMAGES . '/img/socket/i322-socket-1.jpg'; ?>" >
                                 </a>
                             </article>
@@ -79,14 +79,14 @@
                                     <article role="article" class="card">
 
                                         <h3 class="text-center">
-                                            <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'catalog.php?cat=wrenches'); ?>" >
+                                            <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>" >
                                                 Wrenches
                                             </a>
                                         </h3>
                                         <p class="text-center">
                                             Tool Type: Mostly wrench sets some singles.<br>
                                         </p>
-                                        <a href="<?php echo url_for( 'catalog.view.php?cat=wrenches'); ?>">
+                                        <a href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>">
                                             <img class="catalog-images center-block img-responsive img- img-rounded" src="<?php echo IMAGES . '/img/wrench/a2-wrench.jpg'; ?>" >
                                         </a>
                                     </article>
@@ -98,14 +98,14 @@
                                     <article role="article" class="card">
 
                                     <h3 class="text-center">
-                                        <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'catalog.php?cat=air-tools'); ?>" >
+                                        <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=air-tools'); ?>" >
                                             Air Tools
                                         </a>
                                     </h3>
                                     <p class="text-center">
                                             Tool Type: Air drills, etc.<br>
                                     </p>
-                                        <a href="<?php echo url_for( 'catalog.view.php?cat=air-tools'); ?>">
+                                        <a href="<?php echo url_for( 'pages/catalog.php?cat=air-tools'); ?>">
                                             <img class="catalog-images center-block img-rounded" src="<?php echo  IMAGES . '/img/air/b48-air.jpg'; ?>" >
                                         </a>
                                     </article>
