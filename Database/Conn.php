@@ -6,13 +6,13 @@
  * Time: 12:52 PM
  */
 
-class Connection
+class Conn #-> change to Connection
 {
     public static function make()
     {
-        $dsn = 'mysql:dbname=;host=127.0.0.1'; // after dbname=  enter your Database.
-        $user = '';  // DEV=> ENTER YOUR USERNAME in the Strings.
-        $password = ''; // DEV=> enter Mysql password in Strings.
+        $dsn = 'mysql:dbname=;host=127.0.0.1'; # after dbname=  enter your Database.
+        $user = '';  # DEV=> ENTER YOUR USERNAME in the Strings.
+        $password = ''; # DEV=> enter Mysql password in Strings.
 
         try {
             return new PDO($dsn, $user, $password);
