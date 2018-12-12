@@ -5,10 +5,10 @@
  * Date: 12/21/17
  * Time: 10:22 AM
  */
-require_once 'bootstrap.php';
+require_once '../bootstrap.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 //Create a new PHPMailer instance
 $mail = new PHPMailer;
 //Tell PHPMailer to use SMTP
@@ -75,4 +75,4 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
 $page_title = 'Tool Inquiry';
 $section = null;
 
-require_once('views/email.view.php');
+require_once('../views/email.view.php');
