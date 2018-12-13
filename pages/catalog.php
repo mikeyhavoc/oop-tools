@@ -109,9 +109,8 @@ $con = $db; // grab db to con for connection into queries.
 try {
     if (isset($param)) {
         $first_item_query = "SELECT t.t_id AS id, t.item_code AS code, t.item_name AS name,
-                       t.retail_price AS retail, t.sale_price AS price,
-                       t.item_pieces AS  pieces, t.qty AS quantity,
-                       t.sold AS sold, t.description AS description,
+                       t.sale_price AS price,
+                       t.sold AS sold, 
                        b.brand AS brand, c.category AS category,                                  
                        tt.tool_type AS section, i.image AS image
                        FROM Tools AS t
