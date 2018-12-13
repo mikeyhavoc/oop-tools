@@ -22,7 +22,7 @@ try {
                       INNER JOIN Brands AS b ON t.b_id = b.b_id
                       INNER JOIN Categories AS c ON t.c_id = c.c_id
                       INNER JOIN Images AS i ON i.t_id = t.t_id 
-                      LEFT OUTER JOIN Types AS tt ON tt.tt_id = t.tt_id
+                      INNER JOIN Types AS tt ON tt.tt_id = t.tt_id
                       WHERE t.t_id = :id LIMIT 1";
     $variables[':id'] = $id;
 
