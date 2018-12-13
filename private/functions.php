@@ -2,6 +2,7 @@
 //include 'initialize.php';
 
 /**
+ * License: GPL3
  * Created by PhpStorm.
  * User: mike
  * Date: 8/21/17
