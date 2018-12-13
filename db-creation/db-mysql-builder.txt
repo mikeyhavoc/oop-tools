@@ -1,20 +1,30 @@
+-- follow the README.md provided in
+-- folder 'db-creation' for instructions.
 
+-- Table Brands creation.
 CREATE TABLE Brands (
   b_id int NOT NULL AUTO_INCREMENT,
   brand VARCHAR(35) UNIQUE NOT NULL,
   PRIMARY KEY ( b_id )
 );
+
+-- table Categories creation
 CREATE TABLE Categories (
   c_id int NOT NULL AUTO_INCREMENT,
   category VARCHAR(35) unique NOT NULL ,
   PRIMARY KEY ( c_id )
 );
+
+-- Table Types creation
 CREATE TABLE Types (
   tt_id int  NOT NULL AUTO_INCREMENT,
   tool_type VARCHAR(35) UNIQUE NOT NULL,
   PRIMARY KEY ( tt_id )
 );
 
+-- table Tools created Note* must be after Brands, Categories, and Types
+-- Due to the Foreign key references pointing to the other tables otherwise
+-- you will receive an error if you try to run this table before the others.
 CREATE TABLE Tools (
   t_id INT NOT NULL AUTO_INCREMENT,
   item_code varchar(7) UNIQUE NOT NULL ,
@@ -35,6 +45,8 @@ CREATE TABLE Tools (
 
 );
 
+-- table Images creation
+-- must be after Tools or error due to reference to Tools
 CREATE TABLE Images (
   i_id int NOT NULL AUTO_INCREMENT,
   image VARCHAR(255) UNIQUE NOT NULL ,
@@ -44,6 +56,7 @@ CREATE TABLE Images (
   FOREIGN KEY (t_id) REFERENCES Tools(t_id)
 );
 
+-- INSERTS BELOW -------
 
 -- brands insertion
 INSERT INTO Brands (brand)
@@ -997,10 +1010,8 @@ INSERT INTO Images (t_id, image, image_num)
       (58, 'img/socket/s59-socket-1.jpg',1),
       (78, 'img/socket/s79-socket.jpg',1),
       (82, 'img/socket/s83-socket.jpg',1),
-
       (92, 'img/socket/s84a-socket.jpg',1),
       (93, 'img/socket/s84b-socket.jpg',1),
-
       (94, 'img/socket/s84c-socket.jpg',1),
       (95, 'img/socket/s84d-socket.jpg',1),
       (123, 'img/socket/t113-socket.jpg',1),
