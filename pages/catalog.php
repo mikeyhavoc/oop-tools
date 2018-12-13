@@ -105,21 +105,6 @@ if ( isset($_GET['cat']) ) {
     }
 }
 
-$con = $db; // grab db to con for connection into queries.
-
-try {
-    if (isset($param)) {
-        $breadcrumb_query = "SELECT c.tool_type AS category
-                     FROM Tools AS t
-                     JOIN Types c ON t.tt_id = c.tt_id
-                     WHERE c.tool_type = :breadcrumb LIMIT 1";
-        $crumbs[':breadcrumb'] = $param;
-        $breadcrumb = execute_query($con, $breadcrumb_query, $crumbs);
-    }
-}catch(PDOException $e) {
-    $e->getMessage();
-    exit;
-}
 
  $page_title = 'Tool Catalog';
 
