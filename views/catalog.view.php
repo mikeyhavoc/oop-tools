@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2018. Michael Williams Manic Designer Developments.
+ * Copyright (CC) 2018. Michael Williams Manic Designer Developments.
  */
 /**
  * Created by PhpStorm.
