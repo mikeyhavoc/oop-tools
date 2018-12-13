@@ -56,12 +56,10 @@ function execute_query($con, $query, $variables) {
  * @return array|mixed
  */
 function first_item_query($parameter) {
-    $db = Connection::make();
-    $con = $db; // the connection to the db.
+    $con = Connection::make(); // the connection to the db.
     try {
-        if (isset($parameter)) {
             $sql = "SELECT t.t_id AS id, t.item_code AS code, t.item_name AS name,
-                       t.sale_price AS price,
+                       t.sale_price AS price, t.description as description,
                        t.sold AS sold, 
                        b.brand AS brand, c.category AS category,                                  
                        tt.tool_type AS section, i.image AS image
@@ -76,10 +74,26 @@ function first_item_query($parameter) {
             $items->bindParam(':tool', $parameter, PDO::PARAM_STR);
             $items->execute();
             return $items;
-        }
     }catch(PDOException $e) {
         $e->getMessage();
         exit;
     }
     return $items;
 } // end of function first_item_query()
+
+function get_breadcrumb_query($parameter) {
+    $con = Connection::make();
+    try {
+        if (isset($parameter)) {
+            $breadcrumb_query = "SELECT c.tool_type AS category
+                     FROM Tools AS t
+                     JOIN Types c ON t.tt_id = c.tt_id
+                     WHERE c.tool_type = :breadcrumb LIMIT 1";
+            $crumbs[':breadcrumb'] = $param;
+            $breadcrumb = execute_query($con, $breadcrumb_query, $crumbs);
+        }
+    }catch(PDOException $e) {
+        $e->getMessage();
+        exit;
+    }
+}
