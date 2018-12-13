@@ -35,7 +35,7 @@
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="" aria-current="page" href="<?php echo url_for('index.php'); ?>">Home</a></li>
                 <?php if(isset($param)) { ?>
-                    <?php $breadcrumb = get_breadcrumb_query($param); ?>
+                    <?php $breadcrumb = catalog_breadcrumb_query($param); ?>
                     <?php foreach ($breadcrumb as $crumb) { ?>
                         <li class="breadcrumb-item">
                             <a class="disabled text-muted" href="/pages/catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a>
