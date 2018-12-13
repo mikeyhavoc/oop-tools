@@ -49,8 +49,9 @@
 
     <section class="container-fluid">
         <div class="row">
-           <?php if (isset($items)) { ?>
-            <?php foreach ( $items as $item) : ?>
+           <?php if (isset($param)) { ?>
+               <?php $tools = first_item_query($param); ?>
+                  <?php foreach ($tools as $item) : ?>
             <div class="col-12 col-sm-6 col-md-4">
                 <div class="container-fluid">
                         <article class="cards">
@@ -70,7 +71,7 @@
 
                                                 <h4 class="cat-order-sold sale"><?php echo $sold = ($item['sold'] == 0 ? 'For Sale' : 'sold'); ?></h4>
 
-                                                <a class="cat-order-btn btn btn-lg btn-outline-danger btn-width center-block"  href='details.php?id=<?php echo $item['id']?>'><?php echo $item['id']; ?></a>
+                                                <a class="cat-order-btn btn btn-lg btn-outline-danger btn-width center-block"  href='/pages/details.php?id=<?php echo $item['id']?>'><?php echo $item['id']; ?></a>
 
                                             </section>
                                        </section>
