@@ -1,6 +1,7 @@
 <?php
 /**
  * Created by PhpStorm.
+ * Licesne: GPL3
  * User: mikey
  * Date: 12/12/18
  * Time: 3:40 PM
