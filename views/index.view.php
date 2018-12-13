@@ -1,21 +1,18 @@
+<?php
+/**
+ * Copyright (c) 2018. Michael Williams Manic Designer Developments.
+ */
+/**
+ * Created by PhpStorm.
+ * User: mike
+ * Date: 1/19/18
+ * Time: 2:26 PM
+ */
 
+?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="keywords" content="Garys tools, bradenton tools sale, garys bradenton tools, bradenton tools">
-    <meta name="description" content="Garys tools, retired bodyman selling his body tools locally in bradenton fl.">
-    <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo url_for(node_module('public/css/main.css')); ?>">
+<?php include SHARED_PATH . '/header.php'; ?>
 
-    <title><?php echo $page_title; ?></title>
-</head>
-<body>
     <header role="banner" class='container-fluid'>
       <section class='row'>
         <h1 class="col-12 col-md-4 tools logo__section logo">
