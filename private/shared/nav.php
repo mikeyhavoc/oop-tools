@@ -1,4 +1,15 @@
+<?php
+/**
+ * License: GPL3 2018. Michael Williams Manic Designer Developments.
+ */
+/**
+ * Created by PhpStorm.
+ * User: mike
+ * Date: 1/19/18
+ * Time: 2:26 PM
+ */
 
+?>
         <nav role="navigation" class="navbar navbar-expand-lg navbar-light bg-light">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigationBarToggle" aria-controls="navigationBarToggle" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
