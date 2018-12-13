@@ -50,3 +50,4 @@ function execute_query($con, $query, $variables) {
     return $stmt;
 
 }
+
