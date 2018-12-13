@@ -81,19 +81,21 @@ function first_item_query($parameter) {
     return $items;
 } // end of function first_item_query()
 
-function get_breadcrumb_query($parameter) {
+function catalog_breadcrumb_query($parameter) {
     $con = Connection::make();
     try {
-        if (isset($parameter)) {
-            $breadcrumb_query = "SELECT c.tool_type AS category
+            $sql = "SELECT c.tool_type AS category
                      FROM Tools AS t
                      JOIN Types c ON t.tt_id = c.tt_id
                      WHERE c.tool_type = :breadcrumb LIMIT 1";
-            $crumbs[':breadcrumb'] = $param;
-            $breadcrumb = execute_query($con, $breadcrumb_query, $crumbs);
-        }
+            $breadcrumb = $con->prepare($sql);
+            $breadcrumb->bindParam(':breadcrumb', $parameter, PDO::PARAM_STR);
+            $breadcrumb->execute();
+            return $breadcrumb;
+
     }catch(PDOException $e) {
         $e->getMessage();
         exit;
     }
+    return $breadcrumb;
 }
