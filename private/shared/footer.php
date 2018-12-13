@@ -1,3 +1,15 @@
+<?php
+/**
+ * License: GPL3 2018. Michael Williams Manic Designer Developments.
+ */
+/**
+ * Created by PhpStorm.
+ * User: mike
+ * Date: 1/19/18
+ * Time: 2:26 PM
+ */
+
+?>
 </main>
 <a type="button" role="button" class="btn btn-lg btn-outline-primary" href="#top">Top</a>
 <footer role="footer">
