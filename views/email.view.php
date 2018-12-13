@@ -11,6 +11,8 @@
 
 ?>
 <?php include(SHARED_PATH . '/header.php'); ?>
+
+
 <header role="banner" class='container-fluid'>
     <section class='row'>
         <h1 class="col-12 col-md-4 tools logo__section logo">
