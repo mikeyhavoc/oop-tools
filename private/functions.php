@@ -82,4 +82,4 @@ function first_item_query($parameter) {
         exit;
     }
     return $items;
-}
+} // end of function first_item_query()
