@@ -3,9 +3,14 @@
 The given file will incrementally build the database piece by piece by you running the commands.
 
 1. **Before Running** you need to go into mysql and create your own _Database_ to use though.
-1. _choose_ said database next.
-1. you can run the CREATE TAble(s) individually or together.
-1. **BUT** the _INSERTS_ you need to run individually or an error can occur during 'INSERT INTO Tools' and 'INSERT INTO 'Images'.
+    1. if you are using XAMPP, or WAMPSERVER go to PhpAdmin.
+    1. if you are using a Linux flavor you can go into the terminal
+    if MySQL is already installed and 'CREATE DATABASE {database name}'.
+    then use MySQL workbench, datagrip - jetbrains, visual studio(possibly?) or something else for the rest.
+ 
+1. _choose_ said database next. 'USE {database name}'; 
+1. you can run(paste) the CREATE TAble(s) individually or together.
+1. **BUT** the _INSERTS_ you need to run(paste) individually or an error can occur during 'INSERT INTO Tools' and 'INSERT INTO 'Images'.
 
 ## If You Like
 
