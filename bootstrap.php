@@ -1,6 +1,6 @@
 <?php
 /**
- * CC license
+ * License: GPL3
  * Created by PhpStorm.
  * User: mikey
  * Date: 6/8/18
