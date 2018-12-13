@@ -5,6 +5,8 @@
  * Date: 12/12/18
  * Time: 3:40 PM
  */
+
+if (!isset($page_title)) { $page_title = 'Tools Site'; }
 ?>
 
 <!doctype html>
