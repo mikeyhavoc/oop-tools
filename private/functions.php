@@ -55,7 +55,7 @@ function execute_query($con, $query, $variables) {
  * @param $parameter
  * @return array|mixed
  */
-function first_item_query($pamaeter) {
+function first_item_query($parameter) {
     $db = Connection::make();
     $con = $db; // the connection to the db.
     try {
@@ -71,15 +71,15 @@ function first_item_query($pamaeter) {
                        INNER JOIN Images AS i ON t.t_id = i.t_id
                        LEFT OUTER JOIN Types AS tt ON t.tt_id = tt.tt_id
                        WHERE tt.tool_type = :tool AND i.image_num = 1";
-//            $variable[':tool'] = $parameter;
+            /** @var $items $items */
             $items = $con->prepare($sql);
-//            $items->bindParam(':tool', $variable, PDO::PARAM_STR);
-            $items->execute(array(':tool' => $parameter));
-            var_dump($items);
+            $items->bindParam(':tool', $parameter, PDO::PARAM_STR);
+            $items->execute();
+            return $items;
         }
     }catch(PDOException $e) {
         $e->getMessage();
         exit;
     }
-    return 'something went wrong';
+    return $items;
 }
