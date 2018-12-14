@@ -8,7 +8,6 @@
  * Date: 1/19/18
  * Time: 2:26 PM
  */
-
 ?>
 
 <?php include SHARED_PATH . '/header.php'; ?>
@@ -16,14 +15,12 @@
 <header role="banner" class='container-fluid'>
     <section class='row'>
         <h1 class="col-12 col-md-4 tools logo__section logo">
-            <a class="logo__title logo" href="<?php echo url_for( '/index.php'); ?>">Garys Tools</a>
+            <a class="logo__title logo" href="<?php echo url_for( '/index.php'); ?>">Gary's Tools</a>
         </h1>
     </section>
 </header>
 
 <?php include(SHARED_PATH . '/nav.php'); ?>
-
-
 
 <div class="row">
     <div class="col-12">
@@ -41,8 +38,6 @@
         </nav>
     </div><!--/col-12-->
 </div><!-- /.row -->
-
-
 <section>
     <div class="container">
         <div class="row">
@@ -80,5 +75,4 @@
     </div>
 </section>
 
-
-        <?php include(SHARED_PATH . '/footer.php'); ?>
+<?php include(SHARED_PATH . '/footer.php'); ?>
