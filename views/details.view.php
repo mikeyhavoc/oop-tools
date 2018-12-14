@@ -30,8 +30,8 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo url_for('/index.php'); ?>">Home</a></li>
-                <?php if(isset($id_num)) { ?>
-                <?php $breadcrumb = detail_breadcrumb_query($id_num); ?>
+                <?php if(isset($id)) { ?>
+                <?php $breadcrumb = detail_breadcrumb_query($id); ?>
                 <?php foreach ($breadcrumb as $crumb) { ?>
                     <li class="breadcrumb-item"><a href="/pages/catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a></li>
                     <li class="breadcrumb-item active"><?php echo $crumb['code']; ?></li>
@@ -46,8 +46,8 @@
 <section>
     <div class="container">
         <div class="row">
-                <?php if(isset($id_num)) {   ?>
-                <?php foreach ($details = single_item_details($id_num) as $item) { ?>
+                <?php if(isset($id)) {   ?>
+                <?php foreach ($details = single_item_details($id) as $item) { ?>
                     <div class="col-12 col-sm-6">
                         <article role="article" class='card'>
                             <h1>Code: <?php echo $item['code']; ?></h1>
@@ -67,8 +67,8 @@
 
                 <?php }
                 } /* isset for $items */
-                    if(isset($id_num)) {
-                        $images = detail_images_query($id_num);
+                    if(isset($id)) {
+                        $images = detail_images_query($id);
                     foreach ($images as $image) :
                     ?>
                     <div class="col-12 col-sm-6">
