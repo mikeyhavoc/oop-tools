@@ -110,6 +110,5 @@
             </div>
         </div>
     </div>
-</body>
 
 <?php require(SHARED_PATH . '/footer.php'); ?>
