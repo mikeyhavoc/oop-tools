@@ -30,7 +30,8 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="<?php echo url_for('/index.php'); ?>">Home</a></li>
-                <?php if(isset($breadcrumb)) { ?>
+                <?php if(isset($id_num)) { ?>
+                <?php $breadcrumb = detail_breadcrumb_query($id_num); ?>
                 <?php foreach ($breadcrumb as $crumb) { ?>
                     <li class="breadcrumb-item"><a href="/pages/catalog.php?cat=<?php echo $crumb['category']; ?>"><?php echo $crumb['category']; ?></a></li>
                     <li class="breadcrumb-item active"><?php echo $crumb['code']; ?></li>
@@ -45,8 +46,8 @@
 <section>
     <div class="container">
         <div class="row">
-                <?php if(isset($items)) {   ?>
-                <?php foreach ( $items as $item) { ?>
+                <?php if(isset($id_num)) {   ?>
+                <?php foreach ($details = single_item_details($id_num) as $item) { ?>
                     <div class="col-12 col-sm-6">
                         <article role="article" class='card'>
                             <h1>Code: <?php echo $item['code']; ?></h1>
@@ -64,15 +65,17 @@
                         </article>
                     </div>
 
-                <?php } ?>
-            <?php } /* isset for $items */?>
-                <?php if(isset($images)) { ?>
-                <?php  foreach ($images as $image) : ?>
+                <?php }
+                } /* isset for $items */
+                    if(isset($id_num)) {
+                        $images = detail_images_query($id_num);
+                    foreach ($images as $image) :
+                    ?>
                     <div class="col-12 col-sm-6">
                         <img class="card" src="<?php echo IMAGES . $image['image']; ?>" alt="<?php echo $image['description']; ?>">
                     </div>
-                <?php  endforeach; ?>
-            <?php } /* images isset */?>
+                <?php  endforeach;
+                 } /* images isset */?>
 
     </div>
 </section>
