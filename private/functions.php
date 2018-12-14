@@ -117,3 +117,48 @@ function detail_breadcrumb_query($id) {
     }
     return $detail_breadcrumb;
 }
+
+function single_item_details($id) {
+    try {
+        $db = Connection::make();
+        $sql = "SELECT t.item_code AS code, t.item_name AS name, 
+                      t.retail_price AS retail, t.sale_price AS price, 
+                      t.item_pieces AS pieces, t.qty AS quantity, t.sold AS sold,
+                      b.brand AS brand, c.category AS category, tt.tool_type AS tool_type,
+                      t.description AS description
+                      FROM Tools AS t
+                      INNER JOIN Brands AS b ON t.b_id = b.b_id
+                      INNER JOIN Categories AS c ON t.c_id = c.c_id 
+                      INNER JOIN Types AS tt ON tt.tt_id = t.tt_id
+                      WHERE t.t_id = :id LIMIT 1";
+        $details = $db->prepare($sql);
+        $details->bindParam(':id', $id, PDO::PARAM_INT);
+        $details->execute();
+        return $details;
+    }catch(PDOException $e) {
+        echo $e->getMessage();
+        exit;
+    }
+    return $details;
+}
+
+function detail_images_query($id) {
+    try {
+        $db = Connection::make();
+        $sql = "SELECT t.t_id as id,
+                t.description as description,
+                i.image as image
+                FROM Tools as t
+                JOIN Images as i
+                ON t.t_id = i.t_id
+                WHERE t.t_id = :image";
+        $images = $db->prepare($sql);
+        $images->bindParam(':image', $id, PDO::PARAM_INT);
+        $images->execute();
+        return $images;
+    }catch(PDOException $e){
+        echo $e->getMessage();
+        exit;
+    }
+    return $images;
+}
