@@ -90,7 +90,9 @@ ol {
 
 .sale {
   text-decoration-line: underline; }
-
+.sold {
+  text-decoration-line: none;
+}
 .large {
   font-size: 3em; }
 
