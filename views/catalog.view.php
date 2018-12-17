@@ -31,7 +31,7 @@
                 <?php if (isset($page_name)) { echo $page_name;  } ?>
             </h1>
         </div>
-        <nav aria-label="breadcrumb">
+        <section aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a class="" aria-current="page" href="<?php echo url_for('index.php'); ?>">Home</a></li>
                 <?php if(isset($param)) { ?>
@@ -44,7 +44,7 @@
                 <?php } ?>
             </ol>
 
-        </nav>
+        </section>
     </div>
 </section>
 
