@@ -42,7 +42,7 @@
     <div class="container">
         <div class="row">
                 <?php if(isset($id)) {   ?>
-                <?php foreach ($details = single_item_pages($id) as $item) { ?>
+                <?php foreach ($details = single_item_details($id) as $item) { ?>
                     <div class="col-12 col-sm-6">
                         <article role="article" class='card'>
                             <h1>Code: <?php echo $item['code']; ?></h1>
