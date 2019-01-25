@@ -25,4 +25,4 @@ if (!isset($page_title)) { $page_title = 'Tools Site'; }
 
     <title><?php echo $page_title; ?></title>
 </head>
-<body id="top_section">
+<body id="top-section">
