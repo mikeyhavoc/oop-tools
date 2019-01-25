@@ -118,7 +118,7 @@ function detail_breadcrumb_query($id) {
     return $detail_breadcrumb;
 }
 
-function single_item_pages($id) {
+function single_item_details($id) {
     try {
         $db = Connection::make();
         $sql = "SELECT t.item_code AS code, t.item_name AS name, 
