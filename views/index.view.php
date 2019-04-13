@@ -13,17 +13,13 @@
 
 <?php include SHARED_PATH . '/header.php'; ?>
 
-    <header role="banner" class='container-fluid'>
-      <section class='row'>
-        <h1 class="col-12 col-md-4 tools logo__section logo">
-            <a class="logo__title logo" href="<?php echo url_for( 'index.php'); ?>">Garys Tools</a>
+    <header role="banner">
+
+        <h1 class="header__title">
+            <a class="header-title__link logo" href="<?php echo url_for( 'index.php'); ?>">Garys Tools</a>
         </h1>
-      </section>
+        <?php require(SHARED_PATH . '/nav.php'); ?>
      </header>
-
-
-<?php require(SHARED_PATH . '/nav.php'); ?>
-
     <div class="container-fluid">
 
         <div class="row">
