@@ -20,9 +20,13 @@ if (!isset($page_title)) { $page_title = 'Tools Site'; }
     <meta name="keywords" content="garys tools, tools contact, bradenton tool sale">
     <meta name="description" content="Garys tools, retired bodyman selling his body tools locally in bradenton fl.">
     <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <link rel="stylesheet" href="<?php echo url_for(node_module('public/css/main.css')); ?>">
+<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+    <link rel="stylesheet" href="<?php echo url_for(node_module('public/css/index.css')); ?>">
 
     <title><?php echo $page_title; ?></title>
+
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <![endif]-->
 </head>
-<body id="top-section">
+<body id="top">
