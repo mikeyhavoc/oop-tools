@@ -16,15 +16,14 @@
             </button>
 
 
-            <div class="collapse navbar-collapse" id="navigationBarToggle">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="<?php echo url_for('/index.php') ?>">Home <span class="sr-only"></span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="#" id="hand-tools" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">hand tools</a>
 
-                        <div class="dropdown-menu" aria-labeledby="hand-tools">
+               
+
+                        <a class="nav-link" href="<?php echo url_for('/index.php') ?>">Home <span class="sr-only"></span></a>
+                    <div class="nav-item dropdown"><!-- hamburger create here -->
+                        <a href="#" class="nav-link droptbtn"  id="hand-tools">hand tools</a>
+
+                        <div class="dropdown-menu" id="handToolsDrop">
 
                             <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=crimps'); ?>">Crimps/Cutters</a>
 
@@ -47,11 +46,11 @@
                             <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=wrenches'); ?>">Wrenches</a>
 
                         </div>
-                    </li>
-                    <li>
+                    </div>
+                    
 
-                        <a href="#" class="nav-link dropdown-toggle" id="tool-parts" role="button" data-toggle="dropdown" aria-hidden="false" aria-haspopup="true" aria-expanded="false">tool parts</a>
-                        <div class="dropdown-menu" aria-labelledby="tool-parts">
+                        <a href="#" class="nav-link dropbtn" id="tool-parts">tool parts</a>
+                        <div class="dropdown-content" id="toolPartsDropDown">
 
 
                             <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=bits'); ?>">Bits</a>
@@ -69,37 +68,35 @@
                             <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=sockets'); ?>">Sockets</a>
 
                         </div>
-                    </li>
+                    
 
-                    <li class="nav-item">
+                    
                         <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=air-tools'); ?>">Air Tools</a>
-                    </li>
+                    
 
-                    <li class="nav-item">
+                    
                         <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=misc'); ?>">Misc Tools</a>
-                    </li>
+                    
 
-                    <li class="nav-item">
+                    
                         <a class="nav-link" class="nav-item" href="<?php echo url_for( '/pages/catalog.php?cat=removers'); ?>">Removers</a>
-                    </li>
+                    
 
-                    <li class="nav-item">
+                    
                         <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=jacks'); ?>">Jacks</a>
-                    </li>
+                    
 
-                    <li class="nav-item">
+                    
                         <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=hcc'); ?>">Clamps/hooks/chains</a>
-                    </li>
-                    <li class="nav-item">
+                    
+                    
                         <a href="<?php echo url_for('/pages/email.php'); ?>" class="nav-link">Tools Inquiry</a>
-                    </li>
 
 
-                </ul>
             <!--    <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form> -->
-            </div>
+
         </nav>
         <main role="main">
