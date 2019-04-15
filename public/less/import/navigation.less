@@ -1,28 +1,50 @@
 // ------ Navigation.less file ---------//
 .nav__bar {
-  .flex-align();
-  align-items: center;
-  justify-content: space-between;
-  width:60%;
-  .test(red);
+    .flex-align();
+    align-items: center;
+    justify-content: space-between;
+    width:60%;
+    .test(red);
 
-  a {
-    font-size: 1.6rem;
-    text-align: center;
-  }
-
-  .dropdown-content { // drop down items.
-    .flex-align(column);
-  }
-  .dropbtn {
-    .button(@width: 9%, @height: 20%);
-    padding: 0.5rem;
-    border-radius: 5px;
-
-    &:hover, &:focus {
-      background-color: darken(@background-color, 5%);
-      color: @header-font-color;
+    a {
+      font-size: 1.6rem;
+      text-align: center;
     }
+
+    .dropdown-content { // drop down items.
+      .flex-align(column);
+    }
+    .dropbtn {
+      .button(@width: 9%, @height: 20%);
+      padding: 0.5rem;
+      border-radius: 5px;
+
+      &:hover, &:focus {
+        background-color: darken(@background-color, 5%);
+        color: @header-font-color;
+      }
+    }
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        z-index: 1;
+
+        a {
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+
+          &:hover {
+            background: #ddd;
+          }
+        }
+
+      }// .dropdown-content
+  .show {
+    display: block;
   }
-}
+}// .nav__bar
 
