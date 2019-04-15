@@ -15,7 +15,7 @@
     <div class="container main">
         <div class="text-info">
           <section class="greeting intro__section">
-              <h2 class="intro--center">Info</h2>
+              <h2 class="text--center">Info</h2>
               <p class="intro__text intro__text--left">
                   Hi I am Gary and have been working in body shops over 40 years.
                   I have been in local <em>Bradenton</em> shops for about 25 years. I am <em>selling
@@ -26,7 +26,7 @@
               </p>
           </section>
           <section class="notes">
-              <h2 class="notes--center">Tool Info</h2>
+              <h2 class="text--center">Tool Info</h2>
               <p>Important to note:</p>
                 <ul role="list" class="listing--li">
                   <li>Generally <em>most</em> of these items there is only one of said item.</li>
@@ -38,59 +38,55 @@
           </section>
         </div>
 
-            <div class="container--fluid">
-                <section class="col-12 col-sm-6 col-md-4">
-                    <article role="article" class="card">
+        <div class="container--fluid">
+            <section class="img__section">
+                <div class="card">
 
-                        <h2 class="text-center">
-                            <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>" >
-                                Sockets
-                            </a>
-                        </h2>
-                        <p class="text-center">
-                            Tool Type: Sockets.<br>
-                        </p>
-                        <a href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>">
-                            <img class="catalog-images center-block img-responsive img-rounded" src="<?php echo  IMAGES . '/img/socket/i322-socket-1.jpg'; ?>" >
+                        <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>" >
+                           <button class="btn btn--index">
+                               Sockets
+                           </button>
+
                         </a>
-                    </article>
-                </section><!--/ item one -->
-                            <div class="col-sm-6 col-md-4">
-                                    <article role="article" class="card">
 
-                                        <h3 class="text-center">
-                                            <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>" >
-                                                Wrenches
-                                            </a>
-                                        </h3>
-                                        <p class="text-center">
-                                            Tool Type: Mostly wrench sets some singles.<br>
-                                        </p>
-                                        <a href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>">
-                                            <img class="catalog-images center-block img-responsive img- img-rounded" src="<?php echo IMAGES . '/img/wrench/a2-wrench.jpg'; ?>" >
-                                        </a>
-                                    </article>
-                            </div><!--/ item one -->
+                    <p class="text--center">
+                        Tool Type: Sockets.
+                    </p>
+                    <a href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>">
+                        <img class="catalog-images center-block img-responsive img-rounded" src="<?php echo  IMAGES . '/img/socket/i322-socket-1.jpg'; ?>" >
+                    </a>
+                </div>
 
+                <div class="card">
+                    <a href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>" >
+                        <buttton class="btn btn--index">
+                            Wrenches
+                        </buttton>
+                    </a>
+                    <p class="text--center">
+                        Tool Type: Mostly wrench sets some singles.
+                    </p>
+                    <div class="catalog__img">
+                        <a href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>">
+                            <img class="img--responsive img--round" src="<?php echo IMAGES . '/img/wrench/a2-wrench.jpg'; ?>" >
+                        </a>
+                    </div>
+                </div>
+                <div class="card">
+                    <a  href="<?php echo url_for( 'pages/catalog.php?cat=air-tools'); ?>" >
+                        <button class="btn btn--index">
+                            Air Tools
+                        </button>
+                    </a>
 
-
-                                <div class="col-sm-6 col-md-4">
-                                    <article role="article" class="card">
-
-                                    <h3 class="text-center">
-                                        <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=air-tools'); ?>" >
-                                            Air Tools
-                                        </a>
-                                    </h3>
-                                    <p class="text-center">
-                                            Tool Type: Air drills, etc.<br>
-                                    </p>
-                                        <a href="<?php echo url_for( 'pages/catalog.php?cat=air-tools'); ?>">
-                                            <img class="catalog-images center-block img-rounded" src="<?php echo  IMAGES . '/img/air/b48-air.jpg'; ?>" >
-                                        </a>
-                                    </article>
-                                </div>
-
+                    <p class="text--center">
+                            Tool Type: Air drills, etc.
+                    </p>
+                    <a href="<?php echo url_for( 'pages/catalog.php?cat=air-tools'); ?>">
+                        <img class="img--responsive img--round" src="<?php echo  IMAGES . '/img/air/b48-air.jpg'; ?>" >
+                    </a>
+                </div>
+            </section>
         </div>
     </div><!-- //main-container around everything -->
 
