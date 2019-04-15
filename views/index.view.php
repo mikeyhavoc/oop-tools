@@ -13,10 +13,10 @@
 <?php include SHARED_PATH . '/header.php'; ?>
 <!-- header contains nav section too -->
     <div class="container main">
-        <div class="mobile-s">
-          <section class="greeting section__main">
-              <h2 class="header--center">Info</h2>
-              <p class="section__text section__text--left">
+        <div class="text-info">
+          <section class="greeting intro__section">
+              <h2 class="intro--center">Info</h2>
+              <p class="intro__text intro__text--left">
                   Hi I am Gary and have been working in body shops over 40 years.
                   I have been in local <em>Bradenton</em> shops for about 25 years. I am <em>selling
                       off my tools</em>.<br> If you are interested I can provide work place references.
@@ -25,10 +25,10 @@
                   some even new.
               </p>
           </section>
-          <section class="notes section__main">
-              <h2 class="header--center">Tool Info</h2>
+          <section class="notes">
+              <h2 class="notes--center">Tool Info</h2>
               <p>Important to note:</p>
-                <ul role="list" class="listing">
+                <ul role="list" class="listing--li">
                   <li>Generally <em>most</em> of these items there is only one of said item.</li>
                   <li>if any questions about an Item please email</li>
                   <li>listing will be updated asap after sales occur</li>
@@ -38,24 +38,23 @@
           </section>
         </div>
 
-            <div class="container-fluid">
-                <div class="row">
-                        <div class="col-12 col-sm-6 col-md-4">
-                            <article role="article" class="card">
+            <div class="container--fluid">
+                <section class="col-12 col-sm-6 col-md-4">
+                    <article role="article" class="card">
 
-                                <h2 class="text-center">
-                                    <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>" >
-                                        Sockets
-                                    </a>
-                                </h2>
-                                <p class="text-center">
-                                    Tool Type: Sockets.<br>
-                                </p>
-                                <a href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>">
-                                    <img class="catalog-images center-block img-responsive img-rounded" src="<?php echo  IMAGES . '/img/socket/i322-socket-1.jpg'; ?>" >
-                                </a>
-                            </article>
-                        </div><!--/ item one -->
+                        <h2 class="text-center">
+                            <a class="btn btn-lg btn-outline-danger" href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>" >
+                                Sockets
+                            </a>
+                        </h2>
+                        <p class="text-center">
+                            Tool Type: Sockets.<br>
+                        </p>
+                        <a href="<?php echo url_for( 'pages/catalog.php?cat=sockets'); ?>">
+                            <img class="catalog-images center-block img-responsive img-rounded" src="<?php echo  IMAGES . '/img/socket/i322-socket-1.jpg'; ?>" >
+                        </a>
+                    </article>
+                </section><!--/ item one -->
                             <div class="col-sm-6 col-md-4">
                                     <article role="article" class="card">
 
@@ -91,8 +90,8 @@
                                         </a>
                                     </article>
                                 </div>
-            </div>
+
         </div>
-    </div>
+    </div><!-- //main-container around everything -->
 
 <?php require(SHARED_PATH . '/footer.php'); ?>
