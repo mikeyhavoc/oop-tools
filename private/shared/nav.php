@@ -14,7 +14,7 @@
 
             <a class="nav-link" href="<?php echo url_for('/index.php') ?>">Home <span class="sr-only"></span></a>
  <!--   <div class="nav-item dropdown"> hamburger create here -->
-            <a href="#" class="btn droptbtn"  id="hand-tools">hand tools</a>
+            <a href="#" class="btn dropbtn"  id="hand-tools">hand tools</a>
 
             <div class="dropdown-content" id="handToolsDrop">
 
