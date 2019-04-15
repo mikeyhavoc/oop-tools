@@ -14,9 +14,9 @@
 
             <a class="nav-link" href="<?php echo url_for('/index.php') ?>">Home <span class="sr-only"></span></a>
  <!--   <div class="nav-item dropdown"> hamburger create here -->
-            <a href="#" class="nav-link droptbtn"  id="hand-tools">hand tools</a>
+            <a href="#" class="btn droptbtn"  id="hand-tools">hand tools</a>
 
-            <div class="dropdown-menu" id="handToolsDrop">
+            <div class="dropdown-content" id="handToolsDrop">
 
                 <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=crimps'); ?>">Crimps/Cutters</a>
 
@@ -42,7 +42,7 @@
 
 
 
-            <a href="#" class="nav-link dropbtn" id="tool-parts">tool parts</a>
+            <a href="#" class="btn dropbtn" id="tool-parts">tool parts</a>
             <div class="dropdown-content" id="toolPartsDropDown">
                 <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=bits'); ?>">Bits</a>
                 <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=blades'); ?>">Blades</a>
@@ -53,12 +53,12 @@
                 <a class="dropdown-item" href="<?php echo url_for( '/pages/catalog.php?cat=sockets'); ?>">Sockets</a>
             </div>
 
-            <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=air-tools'); ?>">Air Tools</a>
-            <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=misc'); ?>">Misc Tools</a>
-            <a class="nav-link" class="nav-item" href="<?php echo url_for( '/pages/catalog.php?cat=removers'); ?>">Removers</a>
-            <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=jacks'); ?>">Jacks</a>
-            <a class="nav-link" href="<?php echo url_for( '/pages/catalog.php?cat=hcc'); ?>">Clamps/hooks/chains</a>
-            <a href="<?php echo url_for('/pages/email.php'); ?>" class="nav-link">Tools Inquiry</a>
+            <a class="btn" href="<?php echo url_for( '/pages/catalog.php?cat=air-tools'); ?>">Air Tools</a>
+            <a class="btn" href="<?php echo url_for( '/pages/catalog.php?cat=misc'); ?>">Misc Tools</a>
+            <a class="btn" href="<?php echo url_for( '/pages/catalog.php?cat=removers'); ?>">Removers</a>
+            <a class="btn" href="<?php echo url_for( '/pages/catalog.php?cat=jacks'); ?>">Jacks</a>
+            <a class="btn" href="<?php echo url_for( '/pages/catalog.php?cat=hcc'); ?>">Clamps/hooks/chains</a>
+            <a class="btn" href="<?php echo url_for('/pages/email.php'); ?>" class="nav-link">Tools Inquiry</a>
 <!--              </div>-->
 
             <!--    <form class="form-inline my-2 my-lg-0">
