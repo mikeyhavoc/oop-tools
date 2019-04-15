@@ -19,8 +19,9 @@ if (!isset($page_title)) { $page_title = 'Tools Site'; }
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="keywords" content="garys tools, tools contact, bradenton tool sale">
     <meta name="description" content="Garys tools, retired bodyman selling his body tools locally in bradenton fl.">
-    <link href="https://fonts.googleapis.com/css?family=Supermercado+One" rel="stylesheet">
-<!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <!--    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">-->
     <link rel="stylesheet" href="<?php echo url_for(node_module('public/css/index.css')); ?>">
 
     <title><?php echo $page_title; ?></title>
@@ -30,3 +31,11 @@ if (!isset($page_title)) { $page_title = 'Tools Site'; }
     <![endif]-->
 </head>
 <body id="top">
+<header role="banner" class="banner container--fluid">
+
+        <h1 class="tools logo">
+            <a class="logo" href="<?php echo url_for( 'index.php'); ?>">Gary's Tools</a>
+        </h1>
+        <?php require SHARED_PATH . '/nav.php'; ?>
+
+</header>
