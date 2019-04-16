@@ -59,9 +59,9 @@
 
                 <div class="card">
                     <a href="<?php echo url_for( 'pages/catalog.php?cat=wrenches'); ?>" >
-                        <buttton class="btn btn--index">
+                        <button class="btn btn--index">
                             Wrenches
-                        </buttton>
+                        </button>
                     </a>
                     <p class="text--center">
                         Tool Type: Mostly wrench sets some singles.
