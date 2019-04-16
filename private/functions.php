@@ -62,7 +62,8 @@ function first_item_query($parameter) {
                        t.sale_price AS price, t.description as description,
                        t.sold AS sold, 
                        b.brand AS brand, c.category AS category,                                  
-                       tt.tool_type AS section, i.image AS image
+                       tt.tool_type AS section,
+                       i.name AS tool_name, i.image AS image
                        FROM Tools AS t
                        INNER JOIN Brands AS b ON t.b_id = b.b_id
                        INNER JOIN Categories AS c ON t.c_id = c.c_id
@@ -74,6 +75,33 @@ function first_item_query($parameter) {
             $items->bindParam(':tool', $parameter, PDO::PARAM_STR);
             $items->execute();
             return $items;
+    }catch(PDOException $e) {
+        $e->getMessage();
+        exit;
+    }
+    return $items;
+} // end of function first_item_query()
+
+function first_item_query_by_name($parameter) {
+    $con = Connection::make(); // the connection to the db.
+    try {
+        $sql = "SELECT t.t_id AS id, t.item_code AS code, t.item_name AS name,
+                       t.sale_price AS price, t.description as description,
+                       t.sold AS sold, 
+                       b.brand AS brand, c.category AS category,                                  
+                       tt.tool_type AS section,
+                       i.name AS tool_name, i.image AS image
+                       FROM Tools AS t
+                       INNER JOIN Brands AS b ON t.b_id = b.b_id
+                       INNER JOIN Categories AS c ON t.c_id = c.c_id
+                       INNER JOIN Images AS i ON t.t_id = i.t_id
+                       LEFT OUTER JOIN Types AS tt ON t.tt_id = tt.tt_id
+                       WHERE tt.tool_type = :tool AND i.image_num = 1";
+        /** @var $items $items */
+        $items = $con->prepare($sql);
+        $items->bindParam(':tool', $parameter, PDO::PARAM_STR);
+        $items->execute();
+        return $items;
     }catch(PDOException $e) {
         $e->getMessage();
         exit;
