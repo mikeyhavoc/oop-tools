@@ -4,7 +4,13 @@
   "description": "tools site",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css",
+    "build-clean": "rimraf css",
+    "build-cleancss": "cleancss -o css/bulma.min.css css/bulma.css",
+    "build-sass": "node-sass --output-style expanded --source-map true bulma.sass css/bulma.css",
+    "deploy": "npm run build",
+    "start": "npm run build-sass -- --watch"
   },
   "repository": {
     "type": "git",
@@ -18,8 +24,10 @@
   "homepage": "https://github.com/mikeyhavoc/php_tools#readme",
   "devDependencies": {
     "@cedx/gulp-php-minify": "^7.1.1",
+    "autoprefixer": "^9.5.1",
     "babelify": "^8.0.0",
     "browserify": "^16.2.2",
+    "clean-css-cli": "^4.3.0",
     "eslint": "^4.19.1",
     "fs": "0.0.1-security",
     "gulp": "^4.0.0",
@@ -36,7 +44,10 @@
     "gulp-sass": "^4.0.1",
     "gulp-series": "^1.0.2",
     "gulp-sourcemaps": "^2.6.4",
-    "gulp-util": "^3.0.8"
+    "gulp-util": "^3.0.8",
+    "node-sass": "^4.11.0",
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
