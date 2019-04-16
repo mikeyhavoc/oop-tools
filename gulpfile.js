@@ -52,6 +52,11 @@ gulp.task('sass', function () {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('.src/public/css'));
 });
+gulp.task('bulma', function() {
+    return gulp.src('.src/public/bulma/sass/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('.src/public/css/bulma'));
+});
 
 
 
