@@ -5,7 +5,12 @@
   flex-direction: @dir;
 }
 
-
+.button(@width: 25%, @height: 10%, @bg-color: @background-color, @color: @main-font-color) {
+  color: @color;
+  background-color: @background-color;
+  height: @height;
+  width: @width;
+}
 
 .test(@color) {
   border: 1px solid @color;
