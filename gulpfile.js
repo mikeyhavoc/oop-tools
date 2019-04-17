@@ -2,13 +2,13 @@ const
     gulp = require('gulp'),
     sass = require('gulp-sass'),
     gutil = require('gulp-util'),
-    image = require('gulp-image'),
+  //  image = require('gulp-image'),
     newer = require('gulp-newer'),
     debug = require('gulp-debug'),
     series = require('gulp-series'),
     rigger = require('gulp-rigger'),
     notify = require('gulp-notify'),
-    browserSync = require('browser-sync'),
+//    browserSync = require('browser-sync'),
     sourcemaps = require('gulp-sourcemaps'),
     {phpMinify} = require('@cedx/gulp-php-minify'),
     imageOptim = require('gulp-imageoptim'),
@@ -48,14 +48,14 @@ const paths = {
 
 
 gulp.task('sass', function () {
-    return gulp.src('.src/public/sass/**/*.scss')
+    return gulp.src('public/sass/main.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('.src/public/css'));
+        .pipe(gulp.dest('public/css'));
 });
 gulp.task('bulma', function() {
-    return gulp.src('.src/public/bulma/sass/**/*.scss')
+    return gulp.src('public/bulma/bulma.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('.src/public/css/bulma'));
+        .pipe(gulp.dest('public/css'));
 });
 
 
@@ -71,11 +71,11 @@ gulp.task('js', function() {
         .pipe(debug({ title: 'JS:' }))
 });
 
-gulp.task('image', function() {
-    return gulp.src(paths.srcImg)
-        .pipe(imageOptim.optimize())
-        .pipe(gulp.dest(paths.distImg));
-});
+// gulp.task('image', function() {
+//     return gulp.src(paths.srcImg)
+//         .pipe(imageOptim.optimize())
+//         .pipe(gulp.dest(paths.distImg));
+// });
 
 // PHP
 
@@ -85,29 +85,6 @@ gulp.task('php-copy', function() {
         .pipe(gulp.dest(paths.dist));
 });
 
-gulp.task('browser-sync', function () {
-    browserSync.init({
-        server: {
-            baseDir: paths.dist
-        }
-    })
-});
 
 
 // watch
-gulp.task('watch', ['php-copy','sass', 'js', 'browser-sync'], function() {
-    gulp.watch(paths.srcSass, ['sass']);
-    gulp.watch(paths.distCss, browserSync.reload);
-
-
-    gulp.watch(paths.srcJs, ['js'], );
-    gulp.watch(paths.distJs, browserSync.reload)
-    gulp.watch(paths.srcImg, ['image']);
-    gulp.watch(paths.distImg, browserSync.reload);
-    gulp.watch(paths.srcPhp, ['php-copy']);
-    gulp.watch(paths.distPhp, browserSync.reload);
-
-});
-
-// build
-gulp.task('default', ['watch'])
