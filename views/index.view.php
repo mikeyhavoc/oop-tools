@@ -13,22 +13,13 @@
 
 <?php include SHARED_PATH . '/header.php'; ?>
 
-    <header role="banner" class='container-fluid'>
-      <section class='row'>
-        <h1 class="col-12 col-md-4 tools logo__section logo">
-            <a class="logo__title logo" href="<?php echo url_for( 'index.php'); ?>">Garys Tools</a>
-        </h1>
-      </section>
-     </header>
 
 
-<?php require(SHARED_PATH . '/nav.php'); ?>
 
-    <div class="container-fluid">
 
-        <div class="row">
+        <div class="columns">
             <section class="mobile-s">
-              <article role="article" class="info col-12 col-sm-6 ">
+              <article role="article" class="is-half info">
                 <h2 class="text-center">Info</h2>
                 <p class="text-left">
                     Hi I am Gary and have been working in body shops over 40 years.
@@ -41,7 +32,7 @@
 
                 </p>
               </article>
-              <article role="article" class="tool-info col-12 col-sm-6">
+              <article role="article" class="is-half tool-info">
                   <h2 class="text-center">Tool Info</h2>
                   <p>Important to note:</p>
                     <ul role="list">
@@ -109,6 +100,6 @@
                                 </div>
             </div>
         </div>
-    </div>
+
 
 <?php require(SHARED_PATH . '/footer.php'); ?>
