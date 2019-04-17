@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
-    "build-autoprefix": "postcss --use autoprefixer --map false --output css/bulma.css css/bulma.css",
-    "build-clean": "rimraf css",
-    "build-cleancss": "cleancss -o css/bulma.min.css css/bulma.css",
-    "build-sass": "node-sass --output-style expanded --source-map true bulma.sass css/bulma.css",
+    "build-autoprefix": "postcss ./public/css/bulma.css --use autoprefixer --map --output ./public/css/bulma.css",
+    "build-clean": "rimraf ./public/css",
+    "build-cleancss": "cleancss -o ./public/css/bulma.min.css ./public/css/bulma.css",
+    "build-sass": "node-sass --output-style expanded --source-map true ./public/bulma/bulma.sass ./public/css/bulma.css",
     "deploy": "npm run build",
     "start": "npm run build-sass -- --watch"
   },
