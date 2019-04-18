@@ -27,7 +27,7 @@ if (!isset($page_title)) { $page_title = 'Tools Site'; }
 </head>
 <body id="top-section">
     <header role="banner" class='banner'>
-        <div class='columns'>
+        <div class='container'>
             <?php require(SHARED_PATH . '/nav.php'); ?>
         </div>
     </header>
