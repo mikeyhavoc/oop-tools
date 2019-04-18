@@ -53,7 +53,7 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('public/css'));
 });
 gulp.task('bulma', function() {
-    return gulp.src('public/bulma/bulma.scss')
+    return gulp.src('public/bulma/bulma.sass')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('public/css'));
 });
