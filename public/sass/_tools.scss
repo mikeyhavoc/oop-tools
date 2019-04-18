@@ -7,6 +7,15 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+.col-half {
+  width: 50%;
+}
+.vert-flex {
+  flex-direction: column;
+}
+.text-center {
+  text-align: center;
+}
 .info, .tool-info { @include font-pad; font-size: 1.2em; padding: 1em 0.75em;}
 
 .box-blade-width { width: 12.500em; }
