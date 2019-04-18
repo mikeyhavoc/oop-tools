@@ -12,33 +12,36 @@
 ?>
 
 <?php include SHARED_PATH . '/header.php'; ?>
+<div class="container">
     <section class="section">
         <div class="columns">
-                <article role="article" class="is-half info">
-                    <h2 class="text-center">Info</h2>
-                    <p class="text-left">
-                        Hi I am Gary and have been working in body shops over 40 years.
-                        I have been in local <em>Bradenton</em> shops for about 25 years. I am <em>selling
-                            off my tools</em>.<br> If you are interested I can provide work place references.
-                        <br>These tools are my own tools, not selling other peoples tools for them so <em>do not ask</em>.
-                        Also, These are mostly <strong>American made tools</strong>, All still usable, many are lightly used,
-                        some even new.
+            <div class="level-left col-half is-flex vert-flex">
+                <h2>Info</h2>
+                <p class="text-left">
+                    Hi I am Gary and have been working in body shops over 40 years.
+                    I have been in local <em>Bradenton</em> shops for about 25 years. I am <em>selling
+                        off my tools</em>.<br> If you are interested I can provide work place references.
+                    <br>These tools are my own tools, not selling other peoples tools for them so <em>do not ask</em>.
+                    Also, These are mostly <strong>American made tools</strong>, All still usable, many are lightly used,
+                    some even new.
 
 
-                    </p>
-                </article>
-                <article role="article" class="is-half tool-info">
-                    <h2 class="text-center">Tool Info</h2>
-                    <p>Important to note:</p>
-                    <ul role="list">
-                        <li>Generally <em>most</em> of these items there is only one of said item.</li>
-                        <li>if any questions about an Item please email</li>
-                        <li>listing will be updated asap after sales occur</li>
-                        <li>Sales are local only</li>
-                        <li>No Shipping Tools</li>
-                    </ul>
-                </article>
+                </p>
+            </div>
+            <div class="level-right is-flex vert-flex text-center">
+                <h2>Tool Info</h2>
+                <p>Important to note:</p>
+                <ul role="list">
+                    <li>Generally <em>most</em> of these items there is only one of said item.</li>
+                    <li>if any questions about an Item please email</li>
+                    <li>listing will be updated asap after sales occur</li>
+                    <li>Sales are local only</li>
+                    <li>No Shipping Tools</li>
+                </ul>
+            </div>
     </section>
+</div>
+
 
         </div>
             <div class="container-fluid">
